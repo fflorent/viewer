@@ -674,7 +674,7 @@ export default {
 		async showSidebar() {
 			// Open the sidebar sharing tab
 			await OCA.Files.Sidebar.open(this.currentFile.filename)
-			this.showAppsSidebar()
+			setTimeout(this.showAppsSidebar, 50) // we have to wait the animation of the sidebar
 		},
 
 		showAppsSidebar() {
